@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Management;
 using System.IO.Ports;
-using ATMega380;
 
 namespace ArduinoATMC
 {
@@ -74,6 +73,8 @@ namespace ArduinoATMC
 
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
             ArduinoPort = new SerialPort();
             var portNames = SerialPort.GetPortNames();
             // Arduino Chip Name
