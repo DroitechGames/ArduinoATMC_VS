@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoATMC", "ConsoleApplication1\ArduinoATMC.csproj", "{80175B5A-7091-45E9-A511-923235AEFE93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoATMC", "ArduinoATMC\ArduinoATMC.csproj", "{80175B5A-7091-45E9-A511-923235AEFE93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

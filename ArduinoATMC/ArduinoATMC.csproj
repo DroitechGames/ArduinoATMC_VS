@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\SysIcon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ArduinoATMC.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ATMega380">
       <HintPath>..\..\ATMega380\ATMega380\bin\Debug\ATMega380.dll</HintPath>
