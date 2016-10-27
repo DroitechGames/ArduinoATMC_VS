@@ -5,29 +5,35 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoATMC", "ArduinoATMC\ArduinoATMC.csproj", "{80175B5A-7091-45E9-A511-923235AEFE93}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArduinoACP", "ArduinoACP", "{4FECC95D-3BC9-42A9-8632-705FB8D309BF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoACP", "ArduinoACP\ArduinoACP.csproj", "{F90F4844-3B3D-4FF5-9D8E-920686795310}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{80175B5A-7091-45E9-A511-923235AEFE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80175B5A-7091-45E9-A511-923235AEFE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80175B5A-7091-45E9-A511-923235AEFE93}.Debug|x64.ActiveCfg = Debug|x86
+		{80175B5A-7091-45E9-A511-923235AEFE93}.Debug|x64.Build.0 = Debug|x86
 		{80175B5A-7091-45E9-A511-923235AEFE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80175B5A-7091-45E9-A511-923235AEFE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80175B5A-7091-45E9-A511-923235AEFE93}.Release|x64.ActiveCfg = Release|x64
+		{80175B5A-7091-45E9-A511-923235AEFE93}.Release|x64.Build.0 = Release|x64
 		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Debug|x64.ActiveCfg = Debug|x86
+		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Debug|x64.Build.0 = Debug|x86
 		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Release|x64.ActiveCfg = Release|x64
+		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Release|x64.Build.0 = Release|x64
+		{F90F4844-3B3D-4FF5-9D8E-920686795310}.Release|x64.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{F90F4844-3B3D-4FF5-9D8E-920686795310} = {4FECC95D-3BC9-42A9-8632-705FB8D309BF}
 	EndGlobalSection
 EndGlobal

@@ -20,7 +20,7 @@ namespace ArduinoATMC
         /// </summary>
         static string USB_COM_PORT;
         static string USB_COM_NAME;
-        static string USB_COM_GUID; // COM DEVICE GUID.
+        //static string USB_COM_GUID; // COM DEVICE GUID.
         /// <summary>
         /// Serial Device is the Serial Device.
         /// Info String is the information string before the device is printed to screen.
@@ -51,13 +51,15 @@ namespace ArduinoATMC
                             SerialUSB = InfoString + DeviceNP;
                             SerialUSB_P = queryObj["Caption"];
                             SerialDevice = Convert.ToString(SerialUSB_P);
+
+
                             if (SerialDevice.Contains("CH340")) // ATMEGA380
                             {
                                 var CP = SerialDevice.Substring(SerialDevice.Length - 6);
                                 var DV = SerialDevice.Remove(17);
                                 USB_COM_PORT = CP.Substring(CP.Length - 5).Remove(4); // Remove excess parenthesis e.g. ( and ).
                                 USB_COM_NAME = DV;
-                                USB_COM_GUID = null; // Set to value of the GUID of Device. to do...
+                                //USB_COM_GUID = null; // Set to value of the GUID of Device. to do...
                                 Console.WriteLine("COM Port Found: " + USB_COM_PORT + Environment.NewLine + "Device: " + USB_COM_NAME);
                             }
                         }
@@ -119,6 +121,7 @@ namespace ArduinoATMC
             {
                 Console.WriteLine("No Device Detected in COM Port");
                 Console.WriteLine(CText3);
+                Console.WriteLine("The COM Port cannot be detected.");
                 Console.WriteLine("Press Enter to Return.");
                 Console.ReadLine();
             }
