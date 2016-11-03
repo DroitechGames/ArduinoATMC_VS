@@ -21,6 +21,7 @@ namespace ArduinoACP
             richTextBox1.Text   = "Log: ";
             ComInfoTB.Text      = "";
             BaudInfoTB.Text     = "";
+            
         }
 
         static string USB_COM_PORT;
@@ -141,6 +142,7 @@ namespace ArduinoACP
         private void ArduinoACP_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.SysIcon;
+            statusBox.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -152,6 +154,7 @@ namespace ArduinoACP
         static string _AVR_CYGWIN;
         static string _AVR_LIBUSB;
         static string _AVR_IMG;
+
         private void UploadToArduino()
         {
             _AVR_DIRECTORY  = AppDirectory + "AVRAccess\\" ;
@@ -228,6 +231,7 @@ namespace ArduinoACP
                 _AVR_STANDARD_ERROR             = _AVR_ACCESS_PROCESS.StandardError;
                 _AVR_STANDARD_INPUT.AutoFlush   = true;
                 //avrstdin.WriteLine(installDir + "\\avr\\avrdude.exe -Cavr/avrdude.conf -patmega328p -cstk500v1 -P" + avrport + " -b57600 -D -Uflash:w:" + dir + "/avr/AVRImage.hex:i");
+                this.statusBox.Text = "Uploading to Device...";
                 _AVR_STANDARD_INPUT.WriteLine( _AVR_DIRECTORY + "avrdude.exe -Cavr/avrdude.conf -patmega328p -cstk500v1 -P" + _AVR_PORT + " -b57600 -D -Uflash:w:" + _AVR_DIRECTORY + "AVRImage.hex:i");
                 _AVR_STANDARD_INPUT.Close();
 
@@ -237,6 +241,7 @@ namespace ArduinoACP
             catch (Exception ex2)
             {
                 MessageBox.Show(ex2.Message);
+                this.statusBox.Text = "Upload to Device Failed..";
             }
         }
 
@@ -244,11 +249,13 @@ namespace ArduinoACP
         {
             try
             {
+                this.statusBox.Text = "Getting Arduino COM PORT...";
                 GetArduinoSerialPort_VK();
             }
             catch (Exception e1)
             {
                 MessageBox.Show(e1.Message);
+                this.statusBox.Text = "Failed in Getting Arduino COM PORT...";
             }
         }
     }
