@@ -18,7 +18,7 @@ namespace ArduinoACP
         public ArduinoACP()
         {
             InitializeComponent();
-            richTextBox1.Text   = "Log: ";
+            ApplicationLogText.Text   = "Log: ";
             ComInfoTB.Text      = "";
             BaudInfoTB.Text     = "";
             
@@ -107,7 +107,7 @@ namespace ArduinoACP
         private void button1_Click(object sender, EventArgs e)
         {
             OpenArduinoATMC_CMD();
-           
+            statusBox.Text = "";
         }
 
         private void OpenArduinoATMC_CMD()
@@ -118,8 +118,8 @@ namespace ArduinoACP
                 //string WD = LocalUser + urldir;
                 //MessageBox.Show(AppDirectory + FN);
                 //richTextBox1.AppendText(WD);
-                richTextBox1.AppendText(Environment.NewLine + Environment.NewLine);
-                richTextBox1.AppendText(AppDirectory + FN);
+                ApplicationLogText.AppendText(Environment.NewLine + Environment.NewLine);
+                ApplicationLogText.AppendText(AppDirectory + FN);
                 try
                 {
                     processNew.StartInfo.WorkingDirectory = AppDirectory;
@@ -129,7 +129,7 @@ namespace ArduinoACP
                     if (processNew.HasExited == true)
                     {
                         //deviceInformationLB.Items.Clear();
-                        richTextBox1.AppendText( Environment.NewLine + "Arduino ATMC has been closed.");
+                        ApplicationLogText.AppendText( Environment.NewLine + "Arduino ATMC has been closed.");
                     }
                 }
                 catch (Exception ex)
@@ -235,8 +235,8 @@ namespace ArduinoACP
                 _AVR_STANDARD_INPUT.WriteLine( _AVR_DIRECTORY + "avrdude.exe -Cavr/avrdude.conf -patmega328p -cstk500v1 -P" + _AVR_PORT + " -b57600 -D -Uflash:w:" + _AVR_DIRECTORY + "AVRImage.hex:i");
                 _AVR_STANDARD_INPUT.Close();
 
-                richTextBox1.Text = _AVR_STANDARD_OUTPUT.ReadToEnd();
-                richTextBox1.Text += _AVR_STANDARD_ERROR.ReadToEnd();
+                ApplicationLogText.Text = _AVR_STANDARD_OUTPUT.ReadToEnd();
+                ApplicationLogText.Text += _AVR_STANDARD_ERROR.ReadToEnd();
             }
             catch (Exception ex2)
             {
@@ -251,6 +251,8 @@ namespace ArduinoACP
             {
                 this.statusBox.Text = "Getting Arduino COM PORT...";
                 GetArduinoSerialPort_VK();
+                this.statusBox.Text = "...";
+
             }
             catch (Exception e1)
             {

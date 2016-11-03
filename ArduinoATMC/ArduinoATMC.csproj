@@ -110,7 +110,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ArduinoScript\Clock.ino">
+    <None Include="ArduinoScript\Clock\Clock.ino">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\SysIcon.ico" />

@@ -99,7 +99,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="xObj.cs" />
-    <Content Include="AVRAccess\cygwin1.dll" />
+    <Content Include="AVRAccess\cygwin1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="ArduinoACP.resx">
       <DependentUpon>ArduinoACP.cs</DependentUpon>
     </EmbeddedResource>
