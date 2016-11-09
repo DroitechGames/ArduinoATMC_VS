@@ -33,13 +33,14 @@
             this.deviceInformationLB = new System.Windows.Forms.ListBox();
             this.ApplicationLogText = new System.Windows.Forms.RichTextBox();
             this.ArduinoCodeEditor = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DetectArduinoBTN = new System.Windows.Forms.Button();
             this.ComInfoTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BaudInfoTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.statusBox = new System.Windows.Forms.Label();
+            this.CheckHexBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -109,15 +110,15 @@
             this.ArduinoCodeEditor.TabIndex = 3;
             this.ArduinoCodeEditor.Text = "Arduino Code Editor";
             // 
-            // button3
+            // DetectArduinoBTN
             // 
-            this.button3.Location = new System.Drawing.Point(14, 333);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 29);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Detect Arduino";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.DetectArduino_Click);
+            this.DetectArduinoBTN.Location = new System.Drawing.Point(14, 333);
+            this.DetectArduinoBTN.Name = "DetectArduinoBTN";
+            this.DetectArduinoBTN.Size = new System.Drawing.Size(166, 29);
+            this.DetectArduinoBTN.TabIndex = 4;
+            this.DetectArduinoBTN.Text = "Detect Arduino";
+            this.DetectArduinoBTN.UseVisualStyleBackColor = true;
+            this.DetectArduinoBTN.Click += new System.EventHandler(this.DetectArduino_Click);
             // 
             // ComInfoTB
             // 
@@ -181,19 +182,30 @@
             this.statusBox.TabIndex = 7;
             this.statusBox.Text = "label4";
             // 
+            // CheckHexBtn
+            // 
+            this.CheckHexBtn.Location = new System.Drawing.Point(14, 368);
+            this.CheckHexBtn.Name = "CheckHexBtn";
+            this.CheckHexBtn.Size = new System.Drawing.Size(166, 29);
+            this.CheckHexBtn.TabIndex = 4;
+            this.CheckHexBtn.Text = "Check .HEX";
+            this.CheckHexBtn.UseVisualStyleBackColor = true;
+            this.CheckHexBtn.Click += new System.EventHandler(this.CheckHexBtn_Click);
+            // 
             // ArduinoACP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(618, 375);
+            this.ClientSize = new System.Drawing.Size(618, 405);
             this.Controls.Add(this.statusBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BaudInfoTB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ComInfoTB);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CheckHexBtn);
+            this.Controls.Add(this.DetectArduinoBTN);
             this.Controls.Add(this.ArduinoCodeEditor);
             this.Controls.Add(this.ApplicationLogText);
             this.Controls.Add(this.deviceInformationLB);
@@ -216,13 +228,14 @@
         private System.Windows.Forms.ListBox deviceInformationLB;
         private System.Windows.Forms.RichTextBox ApplicationLogText;
         public System.Windows.Forms.TextBox ArduinoCodeEditor;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DetectArduinoBTN;
         private System.Windows.Forms.TextBox ComInfoTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox BaudInfoTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label statusBox;
+        private System.Windows.Forms.Button CheckHexBtn;
     }
 }
 
